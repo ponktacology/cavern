@@ -1,0 +1,4 @@
+name: Cavern
+version: ${project.version}
+main: me.ponktacology.cavern.Cavern
+api-version: 1.16
