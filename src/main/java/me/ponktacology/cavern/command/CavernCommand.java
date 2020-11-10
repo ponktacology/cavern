@@ -63,6 +63,7 @@ public class CavernCommand implements CommandExecutor {
                 }
 
                 cavernBlock = new CavernBlock(plugin, location, block.getType());
+                cavernBlock.save();
                 CavernBlock.addBlock(cavernBlock);
 
                 sender.sendMessage(ColorUtil.color("&aSuccessfully added this block to cavern blocks."));
@@ -84,6 +85,7 @@ public class CavernCommand implements CommandExecutor {
                     return false;
                 }
 
+                cavernBlock.remove();
                 CavernBlock.removeBlock(cavernBlock);
 
                 sender.sendMessage(ColorUtil.color("&aSuccessfully removed this block from the cavern blocks."));
